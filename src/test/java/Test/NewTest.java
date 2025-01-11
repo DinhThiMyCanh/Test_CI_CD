@@ -22,7 +22,8 @@ public class NewTest {
 		driver.findElement(By.name("email_address")).sendKeys("bpb@bpb.com");
 		driver.findElement(By.name("password")).sendKeys("bpb@123");
 		// Tìm và click Sign in
-		driver.findElement(By.xpath("//*[@id='tdb5']")).click();
+		//driver.findElement(By.xpath("//*[@id='tdb5']")).click();
+		driver.findElement(By.id("tdb5")).click();
 
 		if (driver.getPageSource().contains("My Account Information")) {
 			
@@ -38,7 +39,7 @@ public class NewTest {
 			
 		}
 	}
-//First Commit
+//First Commit, Second commit
 	@BeforeMethod
 	public void setupBrowser() {
 		driver = new ChromeDriver();
