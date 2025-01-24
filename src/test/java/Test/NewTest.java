@@ -39,32 +39,7 @@ public class NewTest {
 			
 		}
 	}
-	@Test(priority = 2)
-	public void loginInValid() {
-		driver.get("http://practice.bpbonline.com");
-		
-		driver.findElement(By.linkText("My Account")).click();
-		
-		driver.findElement(By.name("email_address")).sendKeys("bpb@bpb.com");
-		driver.findElement(By.name("password")).sendKeys("123456");
-		// Tìm và click Sign in
-		driver.findElement(By.xpath("//*[@id='tdb5']")).click();
-		//driver.findElement(By.id("tdb5")).click();
-
-		if (driver.getPageSource().contains("My Account Information")) {
-			
-			driver.findElement(By.linkText("Log Off"));
-			driver.findElement(By.id("tdb4")).click();// nút Continue
-			
-			//Nhật ký đăng nhập thành công
-			Reporter.log("User information is valid");
-			
-		} else {
-			//Nhật ký đăng nhập không thành công
-			Reporter.log("User information is invalid");
-			
-		}
-	}
+	
 //First Commit, Second commit, three commint, five commit
 	@BeforeMethod
 	public void setupBrowser() {
